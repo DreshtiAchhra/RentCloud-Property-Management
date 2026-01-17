@@ -1,0 +1,138 @@
+body{
+   font-family: "Poppins",sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.bg-color{
+  
+    background:linear-gradient(white 5%,#2f81ed67,#5faff075,#2bb0a581);
+    
+}
+
+/* nav starts */
+nav{
+    background:linear-gradient(#2f80ed 10% ,white 0.2% );
+    justify-content: space-between;
+    height: 70px;
+    padding: 40px;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    position: fixed;
+}
+nav ul{
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+    padding: 1.5rem;
+    font-size:1.2rem
+}
+nav>h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+/* nav ends */
+/* hero-section starts */
+
+#hero{
+    height: 100vh;
+    background-size: cover;
+    position: sticky;
+    border-radius: 5px;
+    background-image: url('hero.png.jpeg');
+}
+#hero>*,nav{
+    z-index: 10;
+}
+#hero>h2{
+    width: 45%;
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: 1.2rem;
+}
+#hero>p{
+    font-size: 25px;
+    margin-left: 1.2rem;
+}
+/* hero-section ends */
+
+/* feature-card starts */
+#featuredCard{
+    flex-wrap: wrap;
+}
+
+#featureCard>h1{
+    margin: auto;
+    padding: 50px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+#card1{
+    width: 790px;
+    height: 200px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    /* border: 2px solid black; */
+    border-radius: 12px;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.8) ;
+    cursor: pointer;
+    background-color: #ffff;
+}
+#card1>h3{
+    font-size: 1.5rem;
+   margin-top: 50px;
+}
+#p-text{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 500px;
+}
+#card1>img{
+    width: 300px;
+   
+}
+.card{
+    align-self:flex-end;
+    margin-right:10px;
+}
+
+/* feature-card ends */
+
+/* last-section starts */
+#lasth2{
+   
+   padding: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+#lastSection{
+  
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card2{
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    margin: 50px;
+    cursor: pointer;
+}
+.card2>h3{
+    font-size: 2em;
+    font-weight: 500;
+    margin:20px ;
+}
+.card2>p{
+    font-size:1.5em;
+    margin: 20px;
+}
+
+/* last-section ends */
