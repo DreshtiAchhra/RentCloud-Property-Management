@@ -1,0 +1,97 @@
+/* css/dashboard.css */
+
+/* 1. Stats Grid (Top Row) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 { font-size: 0.9rem; opacity: 0.9; font-weight: 500; }
+.stat-card .stat-value { font-size: 2rem; font-weight: 700; margin-top: 10px; }
+
+/* Specific Card Colors from Image */
+.dark-blue { background: #34495E; }
+.light-blue { background: #5D6D7E; }
+.orange-fill { background: linear-gradient(135deg, #E67E22, #F39C12); }
+.orange-outline { 
+    background: white; 
+    color: #E67E22; 
+    border: 2px solid #E67E22; 
+}
+.orange-outline h3 { color: #E67E22; }
+
+/* 2. Split Section (Risk & Attention) */
+.split-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 parts Risk, 1 part Attention */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-header h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Risk Items Styling */
+.risk-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 12px;
+    background: #FFF8F0; /* Light orange tint */
+    border-left: 4px solid #E74C3C;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.risk-item.high i { color: #E74C3C; margin-top: 3px;}
+.risk-info { display: flex; flex-direction: column; }
+.risk-info strong { font-size: 0.95rem; color: #C0392B; }
+.risk-info span { font-size: 0.85rem; color: #666; }
+
+/* Attention Items Styling */
+.attention-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EEE;
+}
+.icon-box {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+}
+.icon-box.blue { background: #EBF5FB; color: #3498DB; }
+.icon-box.orange { background: #FEF5E7; color: #E67E22; }
+.att-text { display: flex; flex-direction: column; }
+.att-text strong { font-size: 0.9rem; }
+.att-text span { font-size: 0.8rem; color: #777; }
+
+/* 3. Activity Feed */
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.activity-item i { margin-right: 10px; }
+.text-green { color: #27AE60; }
+.text-blue { color: #2980B9; }
+.time { font-size: 0.8rem; color: #999; }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Dashboard</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <i class="fa-solid fa-building-user"></i>
+            <span>Landlord</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="pages/properties.html">Properties</a>
+            <a href="pages/tenants.html">Tenants</a>
+            <a href="pages/reports.html">Reports</a>
+            <a href="pages/settings.html">Settings</a>
+        </div>
+
+        <div class="nav-profile">
+            <div class="notification-badge">
+                <i class="fa-regular fa-bell"></i>
+                <span class="dot"></span>
+            </div>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="profile-pic">
+            <span class="profile-name">Alexas <i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        
+        <header class="page-header">
+            <h1>Dashboard</h1>
+            <span class="date-display">Jan 31, 2026</span>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card dark-blue">
+                <h3>Total Properties</h3>
+                <div class="stat-value" id="total-properties">--</div>
+            </div>
+            <div class="stat-card light-blue">
+                <h3>Total Units</h3>
+                <div class="stat-value" id="total-units">--</div>
+            </div>
+            <div class="stat-card orange-fill">
+                <h3>Rent Collected</h3>
+                <div class="stat-value" id="rent-collected">₹0</div>
+                <small>This Month</small>
+            </div>
+            <div class="stat-card orange-outline">
+                <h3>Open Issues</h3>
+                <div class="stat-value" id="open-issues">--</div>
+            </div>
+        </section>
+
+        <section class="split-grid">
+            
+            <div class="content-card">
+                <div class="card-header">
+                    <h2>Risk Radar</h2>
+                </div>
+                <div class="risk-list" id="risk-list">
+                    <div class="risk-item high">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <div class="risk-info">
+                            <strong>High Risk: Tenant in Apt 303</strong>
+                            <span>Frequent Late Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <h2>Attention Required</h2>
+                </div>
+                <div class="attention-list">
+                     <div class="attention-item">
+                        <div class="icon-box blue"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <div class="att-text">
+                            <strong>Rent Overdue: Flat 405</strong>
+                            <span>Late by 5 days</span>
+                        </div>
+                     </div>
+                     <div class="attention-item">
+                        <div class="icon-box orange"><i class="fa-regular fa-clock"></i></div>
+                        <div class="att-text">
+                            <strong>Lease Expiring: Flat 110</strong>
+                            <span>14 Days Left</span>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card full-width">
+            <div class="card-header">
+                <h2>Recent Activity</h2>
+            </div>
+            <div class="activity-feed">
+                <div class="activity-item">
+                    <i class="fa-solid fa-money-bill-wave text-green"></i>
+                    <span><strong>Rent Received:</strong> Apt 401 - ₹15,000</span>
+                    <span class="time">2h ago</span>
+                </div>
+                <div class="activity-item">
+                    <i class="fa-solid fa-wrench text-blue"></i>
+                    <span><strong>Maintenance Completed:</strong> Fixed AC in Apt 207</span>
+                    <span class="time">Yesterday</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

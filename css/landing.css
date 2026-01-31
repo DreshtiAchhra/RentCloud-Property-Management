@@ -1,0 +1,250 @@
+/* css/landing.css */
+
+/* --- NAVIGATION --- */
+.landing-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--nav-bg); /* Dark matches dashboard */
+    color: white;
+}
+
+.nav-menu a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-menu a:hover { color: white; }
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-primary:hover { background-color: #d35400; }
+
+.btn-text {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    background-color: var(--nav-bg);
+    color: white;
+    padding: 4rem 5% 8rem; /* Large bottom padding */
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.hero-text { flex: 1; }
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.highlight { color: var(--primary-orange); }
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-buttons { display: flex; gap: 15px; margin-bottom: 30px; }
+.btn-secondary {
+    border: 1px solid #555;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.trust-badges { display: flex; gap: 20px; color: #888; font-size: 0.9rem; }
+.trust-badges i { color: #27ae60; margin-right: 5px; }
+
+/* Hero Image & Floating Cards */
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 1px solid #444;
+}
+
+.floating-card {
+    position: absolute;
+    background: white;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+.card-1 { top: 10%; left: -30px; }
+.card-2 { bottom: 10%; right: -30px; animation-delay: 2s; }
+
+.floating-card i {
+    font-size: 1.5rem;
+    color: var(--primary-orange);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- FEATURES SECTION --- */
+.features-section {
+    padding: 5rem 5%;
+    background-color: var(--bg-color); /* Beige */
+    text-align: center;
+}
+
+.section-header { margin-bottom: 4rem; }
+.section-header h2 { font-size: 2.2rem; margin-bottom: 10px; }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.feature-card:hover { transform: translateY(-5px); }
+
+.feature-card h3 { margin: 15px 0 10px; }
+.feature-card p { color: #666; line-height: 1.6; }
+
+/* --- FOOTER --- */
+footer {
+    background: #222;
+    color: white;
+    padding: 3rem 5%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-links a { color: #888; text-decoration: none; margin-left: 20px; }
+.copyright { text-align: center; color: #555; font-size: 0.9rem; }
+
+/* --- CTA SECTION FIXES --- */
+.cta-section {
+    background: linear-gradient(135deg, #E67E22, #F39C12); /* Orange Gradient */
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.cta-section p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+/* The missing button style */
+.btn-white {
+    background-color: white;
+    color: #E67E22;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block; /* Fixes alignment */
+}
+.btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* --- FOOTER OVERHAUL (Filling the Black Patch) --- */
+footer {
+    background: #1a1a1a; /* Darker, premium black */
+    color: #b0b0b0;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 Columns */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #333;
+}
+
+.footer-brand h3 { color: white; font-size: 1.5rem; margin-bottom: 1rem; }
+.footer-brand p { line-height: 1.6; margin-bottom: 1.5rem; max-width: 300px; }
+
+/* Social Icons */
+.social-links { display: flex; gap: 15px; }
+.social-links a {
+    width: 35px; height: 35px;
+    background: #333;
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-links a:hover { background: #E67E22; }
+
+/* Links Columns */
+.footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.footer-col ul li a:hover { color: #E67E22; padding-left: 5px; }
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    color: #555;
+}
